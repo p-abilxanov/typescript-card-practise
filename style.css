@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    perspective: 2000px;
+}
+
+.card__item {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+    position: relative;
+    transition: transform 600ms ease-in;
+    transform: rotateY(0);
+    transform-style: preserve-3d;
+    border-radius: 10px;
+}
+
+.card__front {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.card__back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 12px;
+    padding: 10px;
+
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__title {
+    padding: 5px 10px;
+    font-weight: 900;
+    border-bottom: 2px solid sandybrown;
+}
+
+.card__text {
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    color: #444;
+}
+
+.card__item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card__item button {
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 5px;
+
+    color: #999;
+}
+
+.card__back b {
+    font-size: 14px;
+    display: block;
+}
+
+.rotate {
+    transform: rotateY(180deg);
+}
